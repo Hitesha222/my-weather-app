@@ -1,5 +1,51 @@
-h1 {
+.container {
+  display: block;
+  margin-left: 200px;
+  padding: 0;
+  box-sizing: border-box;
   text-align: center;
-  color: royalblue;
-  font-size: 100px;
+}
+.location {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-top: 25px;
+}
+.location:focus {
+  outline: none;
+}
+
+#main-icon {
+  font-size: 9rem;
+  position: relative;
+  margin-left: 18rem;
+}
+
+.city::first-letter {
+  text-transform: capitalize;
+}
+
+#city-info {
+  margin-top: 5px;
+  margin-right: 0;
+  margin-left: 0;
+}
+#city-date {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-right: 16rem;
+  position: relative;
+  vertical-align: middle;
+}
+
+#temp-info {
+  margin-top: 8px;
+}
+
+#celsius-change:hover {
+  text-decoration: none;
+}
+
+#fahrenheit-change:hover {
+  text-decoration: none;
 }
