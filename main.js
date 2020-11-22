@@ -29,9 +29,7 @@ function formatDate(timestamp) {
   ];
 
   let day = days[now.getDay()];
-  // return `${day}, ${month} ${dd} `;
-  let currentDate = document.querySelector(".date");
-  currentDate.innerHTML = `${day}, ${month} ${dd}`;
+  return `${day}, ${month} ${dd} `;
 }
 
 function forecastDay(timestamp) {
@@ -46,7 +44,6 @@ function forecastDay(timestamp) {
     "Saturday",
   ];
   let day = days[dayForecast.getDay()];
-
   return `${day}`;
 }
 
@@ -60,9 +57,7 @@ function formatHours(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-
-  let timeCurren = document.querySelector(".time");
-  timeCurren.innerHTML = `${hour}:${minutes}`;
+  return `${hours}:${minutes}`;
 }
 
 function displayWeather(response) {
@@ -139,7 +134,6 @@ function searchCity(city) {
 function onSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#cityName").value;
-  // console.log(city);
   searchCity(city);
 }
 
