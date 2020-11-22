@@ -31,7 +31,7 @@ function formatDate(timestamp) {
   let day = days[now.getDay()];
   // return `${day}, ${month} ${dd} `;
   let currentDate = document.querySelector(".date");
-  currentDate.innerHTML = `${day}, ${month} ${date}`;
+  currentDate.innerHTML = `${day}, ${month} ${dd}`;
 }
 
 function forecastDay(timestamp) {
@@ -68,18 +68,31 @@ function formatHours(timestamp) {
 function displayWeather(response) {
   let country = response.data.sys.country;
   let citySearch = response.data.name;
+  let longitudeW = response.data.coord.lon;
+  let latitudeW = response.data.coord.lat;
 
+  let iconElement = document.querySelector("#icon");
   document.querySelector(".city").innerHTML = `${citySearch}, ${country}`;
-  document.querySelector(".temp").innerHTML = Math.round(
-    response.data.main.temp
+  celsiusTemperature = response.data.main.temp;
+
+  document.querySelector(".date").innerHTML = formatDate(
+    response.data.dt * 1000
   );
-  document.querySelector("#precipitation").innerHTML =
-    response.data.main.humidity;
+  document.querySelector(".time").innerHTML = formatHours(
+    response.data.dt * 1000
+  );
+  document.querySelector(".temp").innerHTML = Math.round(celsiusTemperature);
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#desc").innerHTML =
     response.data.weather[0].description;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
