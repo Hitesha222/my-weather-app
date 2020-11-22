@@ -172,11 +172,10 @@ function convertToFahrenheit(event) {
 
 function convertToCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahreinheitLink.classList.remove("active");
   let temperatureElement = document.querySelector(".temp");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-
-  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let fahreinheitLink = document.querySelector("#fahrenheit-change");
