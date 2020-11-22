@@ -20,15 +20,19 @@
 </head>
 
 <body>
+    <!-- onload="return themeChange()" -->
     <div class="container">
         <header>
             <h5>
                 WEATHER
             </h5>
+
             <div id="enterCity">
                 <form name="myform" style="width: 200px; display:inline-block;">
                     <input type="text" name="ftext" placeholder="Enter city" autocomplete="off"
                         autofocus="on" class="location" id="cityName" />
+                    <!-- <input type="hidden" id="lon">
+					<input type="hidden" id="lat"> -->
                 </form>
                 <button class="btnlocation" id="btnCurrentLocation">
                     Current
@@ -38,14 +42,15 @@
         </header>
 
         <div class="row border" id="city-info">
-            <div class="col-md-auto" id="main-icon">
-                <i class="fas fa-cloud-sun-rain"></i>
+            <div class="col" id="main-icon">
+                <!-- <i class="fas fa-cloud-sun-rain" id="icon"></i> -->
+                <img src=".." id="icon" />
             </div>
             <div class="col" id="city-date">
                 <h1 class="city">
-                    Poole, UK
                 </h1>
                 <h5 class="date">
+
                 </h5>
                 <p style="font-family:sans-serif; font-weight:600;">Updated as of
                     <span class="time" style="font-family:sans-serif; font-weight:600;">
@@ -57,7 +62,6 @@
         <div class="border" id="temp-info">
             <h1>
                 <span class="temp">
-                    12
                 </span>
                 <a href="#" id="celsius-change" style="color: black; display: inline-block; ">
                     <sup style="font-size: 18px; vertical-align: super;">
@@ -73,69 +77,26 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    Precipitation: <span id="precipitation">💦 100</span>%
+                    Humidity: <span id="humidity"> </span>%
                 </div>
                 <div class="col-md-6">
-                    Wind: <span id="wind"> 10 </span>mph
+                    Wind: <span id="wind"> </span>mph
                 </div>
             </div>
             <div class="row">
                 <div id="desc" class="col"
                     style="font-size: 20px; font-family: sans-serif; margin: 1rem; text-transform: capitalize;">
-                    Strong winds and light rain showers
+
                 </div>
             </div>
 
         </div>
 
-        <div class="card-group border" style="margin-top: 8px;">
-            <div class="col">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Monday</h5>
-                        <i class="fas fa-cloud-sun"></i>
-                        <p class="card-text">15°C </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Tuesday</h5>
-                        <i class="fas fa-cloud-sun-rain"></i>
-                        <p class="card-text">12°C </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Wednwsday</h5>
-                        <i class="fas fa-cloud-showers-heavy"></i>
-                        <p class="card-text">14°C </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Thrusday</h5>
-                        <i class="fas fa-cloud-rain"></i>
-                        <p class="card-text">12°C </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Friday</h5>
-                        <i class="fas fa-sun"></i>
-                        <p class="card-text">15°C </p>
-                    </div>
-                </div>
-            </div>
+        <div class="card-group border" id="forecast" style="margin-top: 8px;">
         </div>
-        <a href="https://github.com/Hitesha222/my-weather-app"> Open-source</a> by Hitesha Chauhan
+
+    </div>
+
     </div>
 
     <script src="main.js"></script>

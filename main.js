@@ -137,9 +137,6 @@ function onSubmit(event) {
   searchCity(city);
 }
 
-let form = document.querySelector("form");
-form.addEventListener("submit", onSubmit);
-
 function searchLocation(position) {
   let apiKey = "0ba815334c7359de1226f0622b8ed758";
   let lat = position.coords.latitude;
@@ -178,8 +175,15 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+let celsiusTemperature = null;
+
+let form = document.querySelector("form");
+form.addEventListener("submit", onSubmit);
+
 let fahreinheitLink = document.querySelector("#fahrenheit-change");
 fahreinheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-change");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+searchCity("Sydney");
