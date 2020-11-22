@@ -65,11 +65,13 @@ function formatHours(timestamp) {
 function displayWeather(response) {
   let country = response.data.sys.country;
   let citySearch = response.data.name;
+
   let longitudeW = response.data.coord.lon;
   let latitudeW = response.data.coord.lat;
   let apiKey = "0ba815334c7359de1226f0622b8ed758";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitudeW}&lon=${longitudeW}&exclude=minutely,hourly&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 
   let iconElement = document.querySelector("#icon");
   document.querySelector(".city").innerHTML = `${citySearch}, ${country}`;
@@ -97,15 +99,13 @@ function displayWeather(response) {
 }
 
 function displayForecast(responce) {
-  console.log(responce.data.daily);
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
-  console.log("first");
+
   for (let index = 0; index < 5; index++) {
     forecast = responce.data.daily[index];
-    console.log("Second");
-    console.log(forecast);
+    // console.log(forecast);
     forecastElement.innerHTML += `<div class="col">
 				<div class="card">
 					<div class="card-body text-center">
@@ -120,8 +120,8 @@ function displayForecast(responce) {
           />
 
             <p class="card-text">
-             ${Math.round(forecast.main.temp_max)}°-
-             ${Math.round(forecast.main.temp_min)}°
+             ${Math.round(forecast.temp.max)}°/
+             ${Math.round(forecast.temp.min)}°
             </p>
 				
 				</div>
@@ -137,7 +137,7 @@ function searchCity(city) {
 
   // apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   // apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitudeW}&lon=${longitudeW}&exclude=minutely,hourly&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  // axios.get(apiUrl).then(displayForecast);
 }
 
 function onSubmit(event) {
