@@ -1,45 +1,69 @@
-let now = new Date();
-let date = now.getDate();
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  let dd = now.getDate();
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thrusday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
+  let months = [
+    "January",
+    "Febuary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[now.getMonth()];
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[now.getDay()];
+  // return `${day}, ${month} ${dd} `;
+  let currentDate = document.querySelector(".date");
+  currentDate.innerHTML = `${day}, ${month} ${date}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+
+function forecastDay(timestamp) {
+  let dayForecast = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[dayForecast.getDay()];
+
+  return `${day}`;
 }
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[now.getMonth()];
 
-let currentDate = document.querySelector(".date");
-currentDate.innerHTML = `${day}, ${month} ${date}`;
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-let timeCurren = document.querySelector(".time");
-timeCurren.innerHTML = `${hour}:${minutes}`;
+  let timeCurren = document.querySelector(".time");
+  timeCurren.innerHTML = `${hour}:${minutes}`;
+}
 
 function displayWeather(response) {
   let country = response.data.sys.country;
