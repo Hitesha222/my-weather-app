@@ -18,7 +18,7 @@
 #main-icon {
   font-size: 9rem;
   position: relative;
-  margin-left: 18rem;
+  margin: 0px auto;
 }
 
 .city::first-letter {
@@ -26,14 +26,11 @@
 }
 
 #city-info {
-  margin-top: 5px;
-  margin-right: 0;
-  margin-left: 0;
+  margin: 5px 0;
 }
 #city-date {
-  margin-top: 70px;
-  margin-bottom: 20px;
-  margin-right: 16rem;
+  margin: 55px;
+  text-align: left;
   position: relative;
   vertical-align: middle;
 }
@@ -49,3 +46,18 @@
 #fahrenheit-change:hover {
   text-decoration: none;
 }
+
+/* Media query */
+/* big landscape tablets, laptops, and desktops */
+@media (min-width: 1200px) {
+}
+/* tablet, landscape, low resolution laptop and desktop */
+@media (max-width: 990px) {
+}
+
+/* portrait tablet, e-readers kindle */
+@media (max-width: 800px) {
+}
+/* smartphones, android phones, landscape iphone */
+
+/* smartphones, portrait iphone, portrait 480*320 phones(Android) */

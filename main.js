@@ -66,6 +66,8 @@ function displayWeather(response) {
   let longitudeW = response.data.coord.lon;
   let latitudeW = response.data.coord.lat;
 
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitudeW}&lon=${longitudeW}&exclude=minutely,hourly&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
   let iconElement = document.querySelector("#icon");
   document.querySelector(".city").innerHTML = `${citySearch}, ${country}`;
   celsiusTemperature = response.data.main.temp;
