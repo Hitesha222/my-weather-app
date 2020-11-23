@@ -108,7 +108,7 @@ function displayForecast(responce) {
     // console.log(forecast);
     forecastElement.innerHTML += `<div class="col">
 				<div class="card">
-					<div class="card-body text-center">
+					<div class="card-body text-center" style="height:80px;padding:0;">
           <h5 class="card-title">
                   ${forecastDay(forecast.dt * 1000)}
           </h5>
@@ -116,10 +116,10 @@ function displayForecast(responce) {
          <img
             src="http://openweathermap.org/img/wn/${
               forecast.weather[0].icon
-            }@2x.png"
+            }@2x.png" style="height:50px";
           />
 
-            <p class="card-text">
+            <p class="card-text"style="height:10px" >
              ${Math.round(forecast.temp.max)}°/
              ${Math.round(forecast.temp.min)}°
             </p>

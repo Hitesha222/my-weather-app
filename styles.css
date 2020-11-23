@@ -1,24 +1,31 @@
 .container {
   display: block;
-  margin-left: 200px;
+  height: 100%;
+  margin-top: 10px;
   padding: 0;
-  box-sizing: border-box;
   text-align: center;
+  color: aliceblue;
+  background: linear-gradient(0.25turn, #0b5e90 10%, #189cb8);
+  
 }
 .location {
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border: 1px solid #7f8bbf;
+  border-radius: 5px;
   margin-top: 25px;
 }
 .location:focus {
   outline: none;
+  box-shadow: 2px 2px 8px #aaaaaa;
 }
 
 #main-icon {
-  font-size: 9rem;
   position: relative;
   margin: 0px auto;
+  display: inline-flexbox;
+}
+
+#icon {
+  width: 200px;
 }
 
 .city::first-letter {
@@ -46,18 +53,55 @@
 #fahrenheit-change:hover {
   text-decoration: none;
 }
+#forecast {
+  display: flexbox;
+  margin-top: 10px;
+  height: 200px;
+  
+}
+.card {
+  border-radius: 12px;
+  height: 150px;
+  margin-top: 25px;
+  background: linear-gradient(70deg, #A6F6F1, #189cb8);  
+ 
+}
 
 /* Media query */
 /* big landscape tablets, laptops, and desktops */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) { */
 }
 /* tablet, landscape, low resolution laptop and desktop */
-@media (max-width: 990px) {
+/* @media (max-width: 990px) { */
 }
 
 /* portrait tablet, e-readers kindle */
-@media (max-width: 800px) {
+/* @media (max-width: 800px) { */
 }
 /* smartphones, android phones, landscape iphone */
-
+/* @media (max-width: 570px) {
+  #city-info {
+    display: inline-flexbox;
+    width: 100%;
+    height: 200%;
+  }
+  #main-icon {
+    margin: 10px auto;
+    padding: 0;
+  }
+  #city-date {
+    margin: 30px 5px;
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+  .city {
+    margin: 15px;
+  } */
+  /* #forecast {
+    display: flexbox;
+    height: 300px;
+    width: 100%;
+  } */
+}
 /* smartphones, portrait iphone, portrait 480*320 phones(Android) */
