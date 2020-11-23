@@ -5,8 +5,14 @@
   padding: 0;
   text-align: center;
   color: aliceblue;
-  background: linear-gradient(0.25turn, #0b5e90 10%, #189cb8);
-  
+  background: linear-gradient(
+    to bottom,
+    #7db9e8 0%,
+    #207cca 49%,
+    #2989d8 50%,
+    #1e5799 100%
+  );
+  filter: alpha(opacity=80);
 }
 .location {
   border: 1px solid #7f8bbf;
@@ -17,7 +23,6 @@
   outline: none;
   box-shadow: 2px 2px 8px #aaaaaa;
 }
-
 #main-icon {
   position: relative;
   margin: 0px auto;
@@ -57,27 +62,26 @@
   display: flexbox;
   margin-top: 10px;
   height: 200px;
-  
 }
 .card {
   border-radius: 12px;
   height: 150px;
   margin-top: 25px;
-  background: linear-gradient(70deg, #A6F6F1, #189cb8);  
- 
+  background: linear-gradient(to bottom, #7db9e8 0%, #2989d8);
+  filter: alpha(opacity=60);
 }
 
 /* Media query */
 /* big landscape tablets, laptops, and desktops */
 /* @media (min-width: 1200px) { */
-}
+/* } */
 /* tablet, landscape, low resolution laptop and desktop */
 /* @media (max-width: 990px) { */
-}
+/* } */
 
 /* portrait tablet, e-readers kindle */
 /* @media (max-width: 800px) { */
-}
+/* } */
 /* smartphones, android phones, landscape iphone */
 /* @media (max-width: 570px) {
   #city-info {
@@ -98,10 +102,10 @@
   .city {
     margin: 15px;
   } */
-  /* #forecast {
+/* #forecast {
     display: flexbox;
     height: 300px;
     width: 100%;
   } */
-}
+/* } */
 /* smartphones, portrait iphone, portrait 480*320 phones(Android) */
