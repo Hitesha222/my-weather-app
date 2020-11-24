@@ -17,7 +17,7 @@
 .location {
   border: 1px solid #7f8bbf;
   border-radius: 5px;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 .location:focus {
   outline: none;
@@ -38,7 +38,6 @@
 }
 
 #city-info {
-  margin: 5px 0;
   height: 200px;
 }
 #city-date {

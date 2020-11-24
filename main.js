@@ -101,10 +101,10 @@ function displayWeather(response) {
 function displayForecast(responce) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
-  // let forecast = null;
-  for (let index = 0; index < 5; index++) {
+  let forecast = null;
+  for (let index = 1; index < 6; index++) {
     forecast = responce.data.daily[index];
-    console.log(forecast);
+
     forecastElement.innerHTML += `<div class="col">
 			<div class="card">
 				<div class="card-body text-center" style="height:60px;padding:0;">
