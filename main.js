@@ -194,4 +194,4 @@ fahreinheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-change");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-searchCity("Sydney");
+searchCity("Lisbon");

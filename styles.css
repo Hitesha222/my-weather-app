@@ -6,10 +6,10 @@
   text-align: center;
   color: aliceblue;
   background: linear-gradient(
-    to bottom,
+    0.25turn,
     #7db9e8 0%,
-    #207cca 49%,
-    #2989d8 50%,
+    #207cca 30%,
+    #2989d8 60%,
     #1e5799 100%
   );
   filter: alpha(opacity=80);
@@ -39,6 +39,7 @@
 
 #city-info {
   margin: 5px 0;
+  height: 200px;
 }
 #city-date {
   margin: 55px;
