@@ -17,11 +17,19 @@
 .location {
   border: 1px solid #7f8bbf;
   border-radius: 5px;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .location:focus {
   outline: none;
   box-shadow: 2px 2px 8px #aaaaaa;
+}
+#btnCurrentLocation {
+  vertical-align: bottom;
+  opacity: 0.7;
+}
+#btnCurrentLocation:active {
+  transform: none;
+  border-style: none;
 }
 #main-icon {
   position: relative;
