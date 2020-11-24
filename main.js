@@ -107,7 +107,7 @@ function displayForecast(responce) {
     console.log(forecast);
     forecastElement.innerHTML += `<div class="col">
 			<div class="card">
-				<div class="card-body text-center" style="height:80px;padding:0;">
+				<div class="card-body text-center" style="height:60px;padding:0;">
           <h5 class="card-title">
                 ${forecastDay(forecast.dt * 1000)}
           </h5>
