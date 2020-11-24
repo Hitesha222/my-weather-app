@@ -101,43 +101,60 @@ function displayWeather(response) {
 function displayForecast(responce) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
-  let forecast = null;
-
-  for (let index = 0; index < 5; index++) {
-    forecast = responce.data.daily[index];
-    // console.log(forecast);
+  // let forecast = null;
+  forecast = responce.data.daily;
+  forecast.forEach((day) => {
     forecastElement.innerHTML += `<div class="col">
-				<div class="card">
-					<div class="card-body text-center" style="height:80px;padding:0;">
-          <h5 class="card-title">
-                  ${forecastDay(forecast.dt * 1000)}
-          </h5>
-          
-         <img
-            src="http://openweathermap.org/img/wn/${
-              forecast.weather[0].icon
-            }@2x.png" style="height:50px";
+  		<div class="card">
+ 				<div class="card-body text-center" style="height:80px;padding:0;">
+         <h5 class="card-title">
+                 ${forecastDay(day.dt * 1000)}
+         </h5>
+
+        <img
+        src="http://openweathermap.org/img/wn/${
+          day.weather[0].icon
+        }@2x.png" style="height:50px";
           />
 
             <p class="card-text"style="height:10px" >
-             ${Math.round(forecast.temp.max)}°/
-             ${Math.round(forecast.temp.min)}°
+             ${Math.round(day.temp.max)}°/
+             ${Math.round(day.temp.min)}°
             </p>
-				
-				</div>
-			</div>`;
-  }
+
+  			</div>
+  		</div>`;
+  });
 }
+// for (let index = 0; index < 5; index++) {
+//   forecast = responce.data.daily[index];
+//   // console.log(forecast);
+//   forecastElement.innerHTML += `<div class="col">
+// 			<div class="card">
+// 				<div class="card-body text-center" style="height:80px;padding:0;">
+//         <h5 class="card-title">
+//                 ${forecastDay(forecast.dt * 1000)}
+//         </h5>
+
+//        <img
+//           src="http://openweathermap.org/img/wn/${
+//             forecast.weather[0].icon
+//           }@2x.png" style="height:50px";
+//         />
+
+//           <p class="card-text"style="height:10px" >
+//            ${Math.round(forecast.temp.max)}°/
+//            ${Math.round(forecast.temp.min)}°
+//           </p>
+
+// 			</div>
+// 		</div>`;
 
 function searchCity(city) {
   let apiKey = "0ba815334c7359de1226f0622b8ed758";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayWeather);
-
-  // apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  // apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitudeW}&lon=${longitudeW}&exclude=minutely,hourly&appid=${apiKey}&units=metric`;
-  // axios.get(apiUrl).then(displayForecast);
 }
 
 function onSubmit(event) {
