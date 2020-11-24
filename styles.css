@@ -72,7 +72,6 @@
   height: 200px;
 }
 .card {
-  border-radius: 12px;
   height: 150px;
   margin-top: 25px;
   background: linear-gradient(to bottom, #7db9e8 0%, #2989d8);
