@@ -102,7 +102,7 @@ function displayForecast(responce) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
-  for (let index = 1; index < 6; index++) {
+  for (let index = 0; index < 5; index++) {
     forecast = responce.data.daily[index];
 
     forecastElement.innerHTML += `<div class="col">

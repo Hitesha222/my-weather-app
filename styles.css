@@ -14,8 +14,9 @@
   );
   filter: alpha(opacity=80);
 }
+
 .location {
-  border: 1px solid #7f8bbf;
+  border: none;
   border-radius: 5px;
   margin-top: 25px;
 }
@@ -27,14 +28,10 @@
   vertical-align: bottom;
   opacity: 0.7;
 }
-#btnCurrentLocation:active {
-  transform: none;
-  border-style: none;
-}
+
 #main-icon {
   position: relative;
-  margin: 0px auto;
-  display: inline-flexbox;
+  margin: 20px;
 }
 
 #icon {
