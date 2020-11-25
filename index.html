@@ -21,22 +21,20 @@
 
 <body>
     <div class="container">
-        <header>
-            <h5 style="padding: 10px;">
-                <img src="https://assets.msn.com/bundles/v1/weather/latest/PartlyCloudyDayV2.svg"
-                    style="width: 30px;" />
-                WEATHER
-            </h5>
+        <h5 style="padding: 10px;">
+            <img src="https://assets.msn.com/bundles/v1/weather/latest/PartlyCloudyDayV2.svg"
+                style="width: 30px;" />
+            WEATHER
+        </h5>
+        <div id="enterCity">
+            <form name="myform">
+                <input type="text" name="ftext" placeholder="Enter city name" autocomplete="off"
+                    autofocus="on" class="location" id="cityName" />
+            </form>
 
-            <div id="enterCity">
-                <form name="myform">
-                    <input type="text" name="ftext" placeholder="Enter city name" autocomplete="off"
-                        autofocus="on" class="location" id="cityName" />
-                </form>
-                <input type="image" src="image\pngaaa.com-1166226.png" alt="submit"
-                    id="btnCurrentLocation" height="35" width="25" />
-            </div>
-        </header>
+            <input type="image" src="image\pngaaa.com-1166226.png" alt="submit" height="35"
+                width="25" id="btnCurrentLocation" />
+        </div>
 
         <div class=" row" id="city-info">
             <div class="col" id="main-icon">
