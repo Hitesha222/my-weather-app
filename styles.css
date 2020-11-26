@@ -34,6 +34,9 @@
   box-shadow: 2px 2px 8px #aaaaaa;
 }
 
+#btnCurrentLocation {
+  opacity: 0.8;
+}
 #main-icon {
   position: relative;
   margin: 20px;
