@@ -150,7 +150,7 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeather);
 
   //display current forecast
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
