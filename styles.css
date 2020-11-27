@@ -52,6 +52,9 @@
 
 #city-info {
   height: 200px;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
 }
 #city-date {
   margin: 55px;
@@ -82,42 +85,3 @@
   background: linear-gradient(to bottom, #7db9e8 0%, #2989d8);
   filter: alpha(opacity=60);
 }
-
-/* Media query */
-/* big landscape tablets, laptops, and desktops */
-/* @media (min-width: 1200px) { */
-/* } */
-/* tablet, landscape, low resolution laptop and desktop */
-/* @media (max-width: 990px) { */
-/* } */
-
-/* portrait tablet, e-readers kindle */
-/* @media (max-width: 800px) { */
-/* } */
-/* smartphones, android phones, landscape iphone */
-/* @media (max-width: 570px) {
-  #city-info {
-    display: inline-flexbox;
-    width: 100%;
-    height: 200%;
-  }
-  #main-icon {
-    margin: 10px auto;
-    padding: 0;
-  }
-  #city-date {
-    margin: 30px 5px;
-    text-align: center;
-    position: relative;
-    padding: 0;
-  }
-  .city {
-    margin: 15px;
-  } */
-/* #forecast {
-    display: flexbox;
-    height: 300px;
-    width: 100%;
-  } */
-/* } */
-/* smartphones, portrait iphone, portrait 480*320 phones(Android) */
