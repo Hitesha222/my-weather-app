@@ -95,7 +95,6 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  // iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function displayForecast(responce) {
@@ -111,11 +110,10 @@ function displayForecast(responce) {
           <h5 class="card-title">
                 ${forecastDay(forecast.dt * 1000)}
           </h5>
-        
           <img
-             src="http://openweathermap.org/img/wn/${
-               forecast.weather[0].icon
-             }@2x.png" style="height:50px";
+          src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" style="height:50px";
           />
 
           <p class="card-text"style="height:10px" >
